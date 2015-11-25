@@ -1,0 +1,22 @@
+# Bootstrap
+/app/bootstrap*
+
+# Symfony directories
+/*/cache/*
+/*/logs/*
+/*/spool/*
+/bin/*
+/vendor/*
+/web/bundles/*
+/web/uploads/*
+
+# Configuration files
+/app/config/parameters.ini
+/app/config/parameters.yml
+
+# Temp files
+*.php~
+
+!.gitkeep
+.DS_Store
+nbproject

@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: /media/DONNEES/Developpements/www/sites/dominiquesauvignon_eu/www/app/config/routing_dev.yml
