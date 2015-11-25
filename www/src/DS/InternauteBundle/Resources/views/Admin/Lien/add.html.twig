@@ -1,0 +1,11 @@
+{# src/DS/InternauteBundle/Resources/views/Lien/add.html.twig #}
+
+{% extends "DSInternauteBundle::Admin/layout.html.twig" %}
+
+{%  block donnees %}
+    {% block body %}
+        {{ form_errors(form) }}
+        <h2>Ajouter un lien</h2>
+            {% include "DSInternauteBundle:Admin/Lien:form.html.twig" %}
+    {% endblock %}
+{% endblock %}

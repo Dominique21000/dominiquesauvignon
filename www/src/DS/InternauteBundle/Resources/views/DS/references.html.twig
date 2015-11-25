@@ -1,0 +1,31 @@
+{# src/DS/InternauteBundle/resources/views/DS/References.html.twig #}
+
+{% extends "DSInternauteBundle::DS/home2.html.twig" %}
+
+{% block block_nav %}
+<div class="display">
+<table width="100%">
+
+    <strong>{{ references|length }} référence(s)</strong> :
+    <br>
+    <br>
+
+	{% for reference in references %}
+	<tr>
+		<td><strong>{{ reference.titre }}</strong</td>
+	</tr>
+	<tr>
+		<td>{{ reference.description }}</td>
+
+		<td><img src="{{ path('ds_internaute_homepage')}}../logos/{{ reference.logo}}" width="100"></td>
+	</tr>	
+	<tr>
+		<td colspan=2><a href="http://{{ reference.adresse }}" target="_blank">{{ reference.adresse }}</a></td>	
+	</tr>
+	<tr>
+		<td colspan=2><hr></td>
+	</tr>
+	{% endfor %}
+	</table>
+	</div>
+{% endblock %}

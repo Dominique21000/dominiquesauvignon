@@ -1,0 +1,29 @@
+{# src/DS/InternauteBundle/Resources/views/Lien/delete.html.twig #}
+
+{% extends "DSInternauteBundle::Admin/layout.html.twig" %}
+
+{%  block donnees %}
+
+    {% block title %}
+        Supprimer un lien
+    {% endblock %}
+
+
+
+    <h2>Supprimer un lien</h2>
+    <p>
+        Etes-vous certain de vouloir supprimer le lien : {{ lien.titre }} ?
+    </p>
+
+    {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+    <form action="{{ path('ds_admin_lien_delete', {'id': lien.id}) }}" method="post">
+        <a href="{{ path('ds_admin_liens_liste', {'id': lien.id}) }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à la liste
+        </a>
+        {# Ici j'ai écrit le bouton de soumission à la main #}
+        <input type="submit" value="Supprimer" class="btn btn-danger" />
+        {# Ceci va générer le champ CSRF #}
+        {{ form_rest(form) }}
+    </form>
+{% endblock %}

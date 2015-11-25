@@ -1,0 +1,27 @@
+{# src/DS/Internaute/Resources/views/Lien/edit.html.twig #}
+
+{% extends "DSInternauteBundle::Admin/layout.html.twig" %}
+
+{% block donnees %}
+
+    {% block ds_internaute_body %}
+
+        <h2>Modifier le lien : {{ lien.id }}</h2>
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="flash-notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+
+        {% include "DSInternauteBundle:Admin/Lien:form.html.twig" %}
+
+        <p>
+            <a href="{{ path('ds_admin_liens_liste', {'id': lien.id}) }}" class="btn btn-default">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Retour à la liste
+            </a>
+        </p>
+
+    {% endblock %}
+
+{% endblock %}

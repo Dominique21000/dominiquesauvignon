@@ -1,0 +1,31 @@
+{# src/DS/InternauteBundle/Resources/views/DS/liens.html.twig  #}
+
+{% extends "DSInternauteBundle::DS/home2.html.twig" %}
+
+{% block block_nav %}
+<div class="display">
+	<table width="100%">
+
+    	<strong>{{ liens|length }} lien(s)</strong> :
+    	<br>
+    	<br>
+		{% for lien in liens %}
+		<tr>
+			<td><strong>{{ lien.titre }}</strong</td>
+		</tr>
+		<tr>
+			<td valign="=top">{{ lien.description }}</td>
+			<td><img src="{{ path('ds_internaute_homepage')}}../logos/{{ lien.logo}}" width="100">
+			</td>
+		</tr>	
+		<tr>
+			<td colspan=2><a href="http://{{ lien.adresse }}" target="_blank">{{ lien.adresse }}</a>
+			</td>	
+		</tr>
+		<tr>
+			<td colspan=2><hr></td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+ds_internaute_hello:
+    path:     /hello/{name}
+    defaults: { _controller: DSInternauteBundle:Default:index }
+
+ds_internaute_homepage:
+    path:     /
+    defaults: { _controller: DSInternauteBundle:DS:accueil }
+
+ds_internaute_home:
+    path:     /home
+    defaults: { _controller: DSInternauteBundle:DS:home }
+
+ds_internaute_cv:
+    path:     /cv
+    defaults: { _controller: DSInternauteBundle:DS:cv }
+
+ds_internaute_diplome:
+    path:     /diplome
+    defaults: { _controller: DSInternauteBundle:DS:diplome }
+
+ds_internaute_competences:
+    path:     /competences
+    defaults: { _controller: DSInternauteBundle:DS:competences }
+
+ds_internaute_experience:
+    path:     /experience
+    defaults: { _controller: DSInternauteBundle:DS:experience }
+
+ds_internaute_recommandations:
+    path:     /recommandations
+    defaults: { _controller: DSInternauteBundle:DS:recommandations }
+
+ds_internaute_formation:
+    path:     /formation
+    defaults: { _controller: DSInternauteBundle:DS:formation }
+
+ds_internaute_references:
+    path:     /references
+    defaults: { _controller: DSInternauteBundle:DS:viewReferences }
+
+ds_internaute_contact:
+    path:     /contact
+    defaults: { _controller: DSInternauteBundle:DS:contact }
+
+ds_internaute_liens:
+    path:     /liens
+    defaults: { _controller: DSInternauteBundle:DS:viewLiens }
+
+ds_internaute_diplomes:
+    path:     /diplomes
+    defaults: { _controller: DSInternauteBundle:DS:diplomes }
+
+ds_internaute_depannage:
+    path:     /depannage
+    defaults: { _controller: DSInternauteBundle:Depannage:index}
+
+ds_internaute_logiciels:
+    path:       /logiciels
+    defaults: { _controller: DSInternauteBundle:Depannage:viewLogiciels}
+
+ds_admin:
+    path:     /admin
+    defaults: { _controller: DSInternauteBundle:DS:viewAdmin }
+
+ds_admin_lien_add:
+    path:      /admin/lien/add
+    defaults:  { _controller: DSInternauteBundle:Lien:add }
+
+ds_admin_lien_edit:
+    path:      /admin/lien/edit/{id}
+    defaults:  { _controller: DSInternauteBundle:Lien:edit }
+    requirements:
+        id: \d+
+
+ds_admin_lien_delete:
+    path:      /admin/lien/delete/{id}
+    defaults: { _controller: DSInternauteBundle:Lien:delete }
+    requirements:
+      id: \d+
+
+ds_admin_liens_liste:
+    path:     /admin/liens/liste
+    defaults: { _controller: DSInternauteBundle:Lien:view }
+    
+ds_admin_references_liste:
+    path:     /admin/references/liste
+    defaults: { _controller: DSInternauteBundle:Reference:view }
+    
+ds_admin_reference_add:
+    path:      /admin/reference/add
+    defaults:  { _controller: DSInternauteBundle:Reference:add }
+
+ds_admin_reference_edit:
+    path:      /admin/reference/edit/{id}
+    defaults:  { _controller: DSInternauteBundle:Reference:edit }
+    requirements:
+        id: \d+
+
+ds_admin_reference_delete:
+    path:      /admin/reference/delete/{id}
+    defaults: { _controller: DSInternauteBundle:Reference:delete }
+    requirements:
+      id: \d+    

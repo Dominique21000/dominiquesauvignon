@@ -1,0 +1,31 @@
+{# src/DS/InternauteBundle/Resources/views/admin/layout.html.twig #}
+<!DOCTYPE HTML>
+<head>
+    <meta CHARSET="UTF-8">
+    <title>Dominique SAUVIGNON (Développeur web) - Administration</title>
+</head>
+<body>
+    <header>
+        <h1>Administration -
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                Connecté en tant que {{ app.user.username }}</h1>
+            {% endif %}
+    </header>
+    <nav>
+        <h2>Menu : </h2>
+            <a href="{{ path('ds_admin_liens_liste') }}">Gestion des liens</a><br>
+            <a href="{{ path('ds_admin_references_liste') }}">Gestion des références</a><br>
+    </nav>
+
+    <div id="donnees">
+        {% block donnees %}
+        {% endblock %}
+    </div>
+
+    {% stylesheets filter='cssrewrite' '@DSInternauteBundle/Resources/public/css/admin_style.css' '@DSInternauteBundle/Resources/public/css/admin_position.css'  %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}   
+                    
+    <!--<link rel="stylesheet" href="{{ path('ds_internaute_homepage') }}../css/admin_style.css">
+    <link rel="stylesheet" href="{{ path('ds_internaute_homepage') }}../css/admin_position.css"> -->
+</body>

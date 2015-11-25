@@ -1,0 +1,8 @@
+services:
+#    ds_internaute.example:
+#        class: DS\InternauteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    ds_internaute.Visite:
+        class: DS\InternauteBundle\Visite\SiteVisiter
+        #arguments: ["@doctrine.orm.entity_manager", $maDate, $ip, $page, $lg]
+        arguments:  ["@doctrine.orm.entity_manager", $page]

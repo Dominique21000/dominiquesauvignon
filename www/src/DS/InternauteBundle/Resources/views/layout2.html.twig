@@ -1,0 +1,50 @@
+{# src/DS/InternauteBundle/Resources/views/layout2.html.twig #}
+
+<!DOCTYPE HTML>
+<head>
+	<meta CHARSET="UTF-8">
+	<title>Dominique SAUVIGNON (Développeur web)</title>
+</head>
+<body>
+	<header>
+           <div ><a href="{{ path('ds_internaute_home') }}" class="accueil" title="retour vers l'accueil">
+              Accueil</a></div>
+            <div class="nom">
+                <img src="{{ path('ds_internaute_homepage') }}../images/2013_05_14--DominiqueSAUVIGNON_200.JPG" 
+                     alt="Dominique SAUVIGNON" class="photoMoi">
+                <h1>Dominique SAUVIGNON</h1>
+                <a href="mailto:contact@dominiquesauvignon.eu" 
+                   class="lienMail">contact[at]dominiquesauvignon.eu</a><br>
+                <span class="coordonnees">06.85.40.09.36</span>
+            </div>  
+        </header>
+        <nav>
+            {% block block_nav %}
+            {% endblock %}
+        </nav>	
+            {% block block_div %}
+	    {% endblock %}
+        <footer>
+            Webmaster : Dominique SAUVIGNON - Site développé avec le framework Symfony2 <a href="http://symfony.com" target="_blank"><img src="{{ path('ds_internaute_homepage') }}../images/logo_SF.svg" width="100"></a>
+        </footer>                
+
+            {% block link %}
+
+            {% javascripts '@DSInternauteBundle/Resources/public/bibli/*' 'js/*' %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+
+
+            {% stylesheets filter='cssrewrite' '@DSInternauteBundle/Resources/public/css/*'  %}
+                <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+            {% endstylesheets %}   
+        {% endblock %}
+
+
+	<script type="text/javascript">
+        function ouvre(page)
+        {
+            window.open(page,page,"width=900,height=700,top=100,left=200,toolbar=no,location=no");
+        }
+    </script>
+</body>

@@ -1,0 +1,22 @@
+/* css 
+ auteur : par Dominique SAUVIGNON
+*/
+
+
+header{
+   text-align:         center;
+   background-color:   #249BF6;
+   font-weight:        bold;
+   font-size:          20pt;
+}
+
+footer{
+    text-align:         center;
+    background-color:   #CCCCCC;
+    font-weight:        bold;
+}
+
+#bloc_annonce{
+    
+}
+

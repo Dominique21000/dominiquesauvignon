@@ -1,0 +1,44 @@
+/* 
+    Created on : 21 nov. 2014, 14:56:24
+    Author     : dominique
+*/
+
+header{
+   text-align:         center;
+   background-color:   #249BF6;
+   font-weight:        bold;
+}
+
+footer{
+    text-align:         center;
+    background-color:   #CCCCCC;
+    font-weight:        bold;
+}
+
+#bloc_annonce{
+    
+//    border:     solid 1px #8c8080;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#texte_annonce{
+    border:     solid 2px black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+   
+}
+
+.gauche{
+    text-align:         left;
+}
+
+
+.accroche{
+    font-family:    "Verdana";
+    font-weight:    bold;
+    font-size:      20pt;
+}

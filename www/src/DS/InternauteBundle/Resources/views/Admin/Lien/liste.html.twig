@@ -1,0 +1,24 @@
+{# src/DS/InternauteBundle/Resources/views/Admin/Lien/liste.html.twig#}
+
+{% extends "DSInternauteBundle::Admin/layout.html.twig" %}
+
+{%  block donnees %}
+
+<a href="{{ path('ds_admin_lien_add') }}" class="btn-lien_nouveau">Nouveau lien</a>
+<br>
+
+<h1>Liste des liens : </h1>
+<table>
+    {% for lien in liens %}
+        <tr>
+            <td>{{ lien.titre }}</td>
+            <td><a href="{{ path('ds_admin_lien_edit', {'id': lien.id}) }}">Modifier</a></td>
+            <td><a href="{{ path('ds_admin_lien_delete', {'id': lien.id}) }}">Supprimer</a></td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="3">Pas (encore !) de liens</td>
+        </tr>
+    {% endfor %}
+</table>
+{%  endblock %}

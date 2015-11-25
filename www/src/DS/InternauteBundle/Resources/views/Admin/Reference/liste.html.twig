@@ -1,0 +1,24 @@
+{# src/DS/InternauteBundle/Resources/views/Admin/Reference/liste.html.twig#}
+
+{% extends "DSInternauteBundle::Admin/layout.html.twig" %}
+
+{%  block donnees %}
+
+<a href="{{ path('ds_admin_reference_add') }}" class="btn-lien_nouveau">Nouvelle référence</a>
+<br>
+
+<h1>Liste des références : </h1>
+<table>
+    {% for reference in references %}
+        <tr>
+            <td>{{ reference.titre }}</td>
+            <td><a href="{{ path('ds_admin_reference_edit', {'id': reference.id}) }}">Modifier</a></td>
+            <td><a href="{{ path('ds_admin_reference_delete', {'id': reference.id}) }}">Supprimer</a></td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="3">Pas (encore !) de references</td>
+        </tr>
+    {% endfor %}
+</table>
+{%  endblock %}

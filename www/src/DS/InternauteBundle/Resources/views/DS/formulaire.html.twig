@@ -1,0 +1,10 @@
+{# src/DS/InternauteBundleResources/views/DS/formulaire.html.twig #}
+
+<h3>Formulaire de lien</h3>
+
+<div class="well">
+    <form methode="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>

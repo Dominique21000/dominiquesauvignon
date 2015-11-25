@@ -1,0 +1,23 @@
+{# src/DS/InternauteBundle/Resources/views/DS/recommandations.html.twig #}
+
+{% extends "DSInternauteBundle::DS/home2.html.twig" %}
+
+{% block block_nav %}
+
+<div class="display">
+<div id="titre" class="titrePro"><b>Mes recommandations : </b></div>
+<br>
+<div id="recommandation">
+    <b>De M.Claudic, le sensei du Dojo dont je suis le webmaster</b> : <br>
+    <br>
+    <img src="{{ path('ds_internaute_homepage')}}../docs/recommandation/2013_07_27--Lettre_recommandation_SeirenKaiKarateDojo.jpg" width="90%"><br>
+    <br>
+    <hr>
+    <b>De M.Rabut, gérant d'une des sociétés où j'ai travaillé</b> : <br>
+    <br>
+    <img src="{{ path('ds_internaute_homepage')}}../docs/recommandation/2004_06_25--lettreRecommandationAxel-Technologies.jpg" width="90%">
+    
+    
+</div>
+</div>
+{% endblock %}

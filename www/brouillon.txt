@@ -1,0 +1,47 @@
+  <div id="MesCompetences" class="popup" title="Mes compétences">
+        {{ include('DSInternauteBundle:DS:competences.html.twig') }}
+    </div>
+
+
+  <div id="MonExperience" class="popup" title="Mon expérience">
+        {{ include('DSInternauteBundle:DS:experience.html.twig') }}
+    </div>
+
+    <div id="MesRecommandations" class="popup" 
+        title="Mes recommandations">
+        {{ include('DSInternauteBundle:DS:recommandations.html.twig') }}
+    </div>
+
+    <div id="MaFormation" class="popup" title="Ma Formation">
+        {{ include('DSInternauteBundle:DS:formation.html.twig') }}
+    </div>
+        
+       
+    <div id="MeContacter" class="popup" title="Me Contacter">
+        {{ include('DSInternauteBundle:DS:contact.html.twig') }}
+    </div>
+
+    <div id="MesDiplomes" class="popup" title="Mes diplomes">
+        {{ include('DSInternauteBundle:DS:diplome.html.twig') }}
+    </div>
+
+  <div id="MonExperience" class="popup" title="Mon expérience">
+        {{ include('DSInternauteBundle:DS:experience.html.twig') }}
+    </div>
+
+    <div id="MesRecommandations" class="popup" 
+        title="Mes recommandations">
+        {{ include('DSInternauteBundle:DS:recommandations.html.twig') }}
+    </div>
+
+    <div id="MaFormation" class="popup" title="Ma Formation">
+        {{ include('DSInternauteBundle:DS:formation.html.twig') }}
+    </div>
+               
+    <div id="MeContacter" class="popup" title="Me Contacter">
+        {{ include('DSInternauteBundle:DS:contact.html.twig') }}
+    </div>
+   
+    <div id="MesDiplomes" class="popup" title="Mes diplomes">
+        {{ include('DSInternauteBundle:DS:diplome.html.twig') }}
+    </div>
