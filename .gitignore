@@ -11,8 +11,8 @@
 /web/uploads/*
 
 # Configuration files
-/app/config/parameters.ini
-/app/config/parameters.yml
+/app/config/*
+/app/logs/*
 
 # Temp files
 *.php~
